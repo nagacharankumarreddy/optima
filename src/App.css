@@ -1,16 +1,73 @@
-.Header{
+.Header {
+  display: flex;
+}
+.header-left {
+  width: 80%;
   border: 1.5px solid black;
   padding: 10px;
   margin: 3px;
+  margin-right: 0px;
+  float: left;
 }
-#main-head{
+.header-right {
+  width: 20%;
+  border: 1.5px solid black;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  display: flex;
+}
+#main-head {
   text-transform: uppercase;
   font-size: larger;
   color: red;
-  font-weight:bold;
+  font-weight: bold;
 }
-#sub{
+#sub {
   font-size: smaller;
   font-style: italic;
-  font-weight:bold
+  font-weight: bold;
+}
+#bell {
+  float: right;
+}
+.contact,
+.logout {
+  height: 40px;
+  width: 10rem;
+  float: right;
+}
+.menu {
+  width: 50px;
+  height: 500px;
+  float: left;
+}
+
+.menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  height: 80px;
+  padding-top: 50%;
+}
+
+.menu a:hover {
+  background-color: #ccc;
+}
+
+.menu a.active {
+  background-color: darkgreen;
+  color: white;
+}
+.outer{
+  display: flex;
+}
+
+.inner-left{
+  width: 80%;
+  height: 500px;
+  border-style: solid;
+  border-color: black;
+  
+  float: left;
 }
