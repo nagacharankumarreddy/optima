@@ -10,6 +10,7 @@ import { GiPiggyBank } from "react-icons/gi";
 import { CgMail } from "react-icons/cg";
 import { GrLogout } from "react-icons/gr";
 import Financials from "./Components/Financials.jsx";
+
 function App() {
   return (
     <div>

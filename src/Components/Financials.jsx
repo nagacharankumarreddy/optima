@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import userdata from "../userdata.json";
- import image from "../assets/imgone.png";
+import { GoGraph } from "react-icons/go";
 
 const udata = userdata;
 class Financials extends Component {
@@ -8,7 +8,6 @@ class Financials extends Component {
   style = { position: "absolute", left: "114px", top: "53px" };
   render() {
     return (
-      
       <div className="main">
         <h2 style={this.style}>My Financials</h2>
         <div className="main-left">
@@ -34,7 +33,7 @@ class Financials extends Component {
               <span>Credit Outstanding</span>
               <br />
               <span className="tdi-digits">
-                &#8356; {udata.totalAvailableCreditBalance}{" "}
+                &#8356; {udata.totalAvailableCreditBalance}
               </span>
               <br />
             </div>
@@ -51,17 +50,47 @@ class Financials extends Component {
           </div>
           <div className="main-left-bottom">
             <div className="main-left-bottom-left">
-              <h1>Debit data</h1>
+              <div>
+                <div style={{ float: "left" }}>
+                  <h3>Debit Accounts</h3>
+                </div>
+                <div
+                  style={{
+                    float: "right",
+                  }}
+                >
+                  <button className="btn  ">
+                    <GoGraph />
+                  </button>
+                </div>
+              </div>
+              <div><img src="./assets/card.jpg" alt="" height="100px" /></div>
+              <div></div>
+
+
+
             </div>
             <div className="main-left-bottom-right">
-              <h1>Credit Data</h1>
+              <div>
+                <div style={{ float: "left" }}>
+                  <h3>Credit Accounts</h3>
+                </div>
+                <div
+                  style={{
+                    float: "right",
+                  }}
+                >
+                  <button className="btn">
+                    <GoGraph />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="main-right">
           <img src="./assets/imgone.png" alt="" className="image" />
-          {/* <img src={"image"} alt="cant load" height="140px" width="50px"/> */}
         </div>
       </div>
     );
