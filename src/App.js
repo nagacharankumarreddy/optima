@@ -10,8 +10,6 @@ import { GiPiggyBank } from "react-icons/gi";
 import { CgMail } from "react-icons/cg";
 import { GrLogout } from "react-icons/gr";
 import Financials from "./Components/Financials.jsx";
-
-
 function App() {
   return (
     <div>
@@ -30,10 +28,10 @@ function App() {
       </div>
       <div>
         <div className="menu">
-          <a href="/home" class="active">
+          <a href="/home" className="active">
             <AiOutlineHome />
           </a>
-          <a href="/wallet">
+          <a href="/test">
             <BiWalletAlt />
           </a>
           <a href="/">
@@ -53,7 +51,10 @@ function App() {
       <div>
         <div>
           <Router>
-            <Route path="/home" component={Financials} />
+            
+            <Route path="/home" default  component={Financials} />
+            <Route path="/test" default  component={Financials} />
+
           </Router>
         </div>
       </div>
