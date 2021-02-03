@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import userdata from "../userdata.json";
-import "../assets/imgone.png";
+ import image from "../assets/imgone.png";
 
 const udata = userdata;
 class Financials extends Component {
@@ -8,6 +8,7 @@ class Financials extends Component {
   style = { position: "absolute", left: "114px", top: "53px" };
   render() {
     return (
+      
       <div className="main">
         <h2 style={this.style}>My Financials</h2>
         <div className="main-left">
@@ -59,7 +60,8 @@ class Financials extends Component {
         </div>
 
         <div className="main-right">
-          <h1>carousal</h1>
+          <img src="./assets/imgone.png" alt="" className="image" />
+          {/* <img src={"image"} alt="cant load" height="140px" width="50px"/> */}
         </div>
       </div>
     );
