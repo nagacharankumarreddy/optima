@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import BellIcon from "react-bell-icon";
+import {AiOutlineBell} from "react-icons/ai"
 import { IoIosContact } from "react-icons/io";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiWalletAlt } from "react-icons/bi";
@@ -11,6 +11,7 @@ import { CgMail } from "react-icons/cg";
 import { GrLogout } from "react-icons/gr";
 import Financials from "./Components/Financials.jsx";
 
+
 function App() {
   return (
     <div>
@@ -19,7 +20,7 @@ function App() {
           <span id="main-head">optima</span>
           <span id="sub">Pay Less,Save More</span>
           <span id="bell">
-            <BellIcon width="25" active={true} animate={false} />
+            <AiOutlineBell/>
           </span>
         </div>
         <div className="header-right">
