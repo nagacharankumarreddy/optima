@@ -55,6 +55,7 @@ function App() {
             
             <Route path="/home" default  component={Financials} />
             <Route path="/test" default  component={Financials} />
+            <Route path="/test" default  component={Financials} />
 
           </Router>
         </div>
