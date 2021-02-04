@@ -149,7 +149,7 @@
 .main-left-bottom-left,
 .main-left-bottom-right {
   background-color: rgb(214, 214, 205);
-  height: 400px;
+  height: 420px;
   width: 47%;
   border-radius: 10px;
   display: flex;
@@ -174,13 +174,6 @@
   font-weight: 700;
 }
 
-.main-left-bottom-right-bottom {
-  padding-top: 8em;
-  padding-left:11em;
-  padding-bottom: 1em;
-  
-}
-
 .dropdown {
   height: 40px;
   width: 10rem;
@@ -194,13 +187,16 @@
   padding-left:2em;
   padding-right: 0em;
   padding-top: 0.25em;
- ;
+ 
+}
+.inner-opt-button{
+  align-self: flex-end;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 
-#credit , #debit 
-{ padding-top: 0.5em;
-  padding-left: 0.5em;
-  font-size: 150%;
-}
+
+
 

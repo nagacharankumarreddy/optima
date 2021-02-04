@@ -1,21 +1,13 @@
 import React, { Component } from "react";
 import userdata from "../userdata.json";
- 
-import { BiArrowFromLeft, BiArrowFromRight, BiArrowFromTop, BiBarChart, BiBarChartAlt, BiBarChartAlt2, BiBarChartSquare, BiChart } from "react-icons/bi";
 import { GoArrowRight } from "react-icons/go";
-import { GiChart, GiStaticWaves } from "react-icons/gi";
-import { RiBarChartGroupedFill } from "react-icons/ri";
-import { CgChart } from "react-icons/cg";
- import creditdata from "../credit.json";
+import creditdata from "../credit.json";
 import debitdata from "../debit.json";
 import { GoGraph } from "react-icons/go";
-
 const udata = userdata;
 class Financials extends Component {
   state = {};
-
   render() {
-    
     return (
       <div className="main">
         <div className="main-left">
@@ -55,12 +47,13 @@ class Financials extends Component {
               </p>
               <button className="btn btn-success btn-xs">
                 {" "}
-                &nbsp;&nbsp;Yes&nbsp;<GoArrowRight className="yesarrow" />&nbsp;
+                &nbsp;&nbsp;Yes&nbsp;
+                <GoArrowRight className="yesarrow" />
+                &nbsp;
               </button>
             </div>
           </div>
           <div className="main-left-bottom">
-
             <div className="main-left-bottom-left">
               <div className="outer">
                 <div className="inner">
@@ -152,7 +145,7 @@ class Financials extends Component {
             </div>
 
             <div className="main-left-bottom-right">
-            <div className="outer">
+              <div className="outer">
                 <div className="inner">
                   <span
                     style={{
@@ -189,7 +182,8 @@ class Financials extends Component {
                   </div>
                   <div className="inner-two">
                     {creditdata.banks[0].accounts[0].accountType}
-                    &nbsp;|&nbsp;&#8356;{creditdata.banks[0].accounts[0].totalBalanceDue}
+                    &nbsp;|&nbsp;&#8356;
+                    {creditdata.banks[0].accounts[0].totalBalanceDue}
                   </div>
                 </div>
                 <div className="inner">
@@ -212,7 +206,8 @@ class Financials extends Component {
                   </div>
                   <div className="inner-two">
                     {creditdata.banks[1].accounts[0].accountType}
-                    &nbsp;|&nbsp;&#8356;{creditdata.banks[1].accounts[0].totalBalanceDue}
+                    &nbsp;|&nbsp;&#8356;
+                    {creditdata.banks[1].accounts[0].totalBalanceDue}
                   </div>
                 </div>
               </div>
@@ -236,11 +231,17 @@ class Financials extends Component {
                 </div>
                 <div className="inner-two">
                   {creditdata.banks[2].accounts[0].accountType}
-                  &nbsp;|&nbsp;&#8356;{creditdata.banks[2].accounts[0].minMonthlyPayment}
+                  &nbsp;|&nbsp;&#8356;
+                  {creditdata.banks[2].accounts[0].minMonthlyPayment}
                 </div>
               </div>
+              <div className="inner-opt-button">
+                <button className="btn btn-success btn-xs">
+                  Optimize&nbsp;
+                  <GoArrowRight className="optimizearrow" />{" "}
+                </button>
+              </div>
             </div>
-
           </div>
         </div>
 
