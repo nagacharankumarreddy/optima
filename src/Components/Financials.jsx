@@ -1,14 +1,24 @@
 import React, { Component } from "react";
 import userdata from "../userdata.json";
+<<<<<<< HEAD
+ import image from "../assets/imgone.png";
+import { BiArrowFromLeft, BiArrowFromRight, BiArrowFromTop, BiBarChart, BiBarChartAlt, BiBarChartAlt2, BiBarChartSquare, BiChart } from "react-icons/bi";
+import { GoArrowRight } from "react-icons/go";
+import { GiChart, GiStaticWaves } from "react-icons/gi";
+import { RiBarChartGroupedFill } from "react-icons/ri";
+import { CgChart } from "react-icons/cg";
+=======
  import creditdata from "../credit.json";
 import debitdata from "../debit.json";
 import { GoGraph } from "react-icons/go";
 
+>>>>>>> c020286f6e62e204960d6b67c4f4a5dd316a2b5f
 const udata = userdata;
 class Financials extends Component {
   state = {};
 
   render() {
+    
     return (
       <div className="main">
         <div className="main-left">
@@ -46,14 +56,18 @@ class Financials extends Component {
                 Looking for best option to maximize your savings and optimise
                 your expenses
               </p>
-              <button className="btn btn-warning btn-xs">
+              <button className="btn btn-success btn-xs">
                 {" "}
-                &nbsp;&nbsp;Yes&nbsp;&nbsp;
+                &nbsp;&nbsp;Yes&nbsp;<GoArrowRight className="yesarrow" />&nbsp;
               </button>
             </div>
           </div>
           <div className="main-left-bottom">
+
             <div className="main-left-bottom-left">
+<<<<<<< HEAD
+              <h1 id="debit">Debit accounts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BiBarChartAlt className="graph" /></h1>
+=======
               <div className="outer">
                 <div className="inner">
                   <span
@@ -141,8 +155,26 @@ class Financials extends Component {
                   &nbsp;|&nbsp;&#8356;{debitdata.banks[2].accounts[0].balance}
                 </div>
               </div>
+>>>>>>> c020286f6e62e204960d6b67c4f4a5dd316a2b5f
             </div>
+
             <div className="main-left-bottom-right">
+<<<<<<< HEAD
+
+             <div className="main-left-bottom-right-top">
+               <h1 id="credit">Credit accounts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BiBarChartAlt className="graph" /></h1>
+             </div>
+
+              <div className="main-left-bottom-right-middle">
+
+              </div>
+
+              <div className="main-left-bottom-right-bottom">
+               <button className="btn btn-success btn-xs" >{" "}
+               &nbsp;&nbsp;&nbsp;Optimize&nbsp;<GoArrowRight className="optimizearrow" /> &nbsp;&nbsp;&nbsp;</button>
+              </div>
+
+=======
             <div className="outer">
                 <div className="inner">
                   <span
@@ -230,7 +262,9 @@ class Financials extends Component {
                   &nbsp;|&nbsp;&#8356;{creditdata.banks[2].accounts[0].minMonthlyPayment}
                 </div>
               </div>
+>>>>>>> c020286f6e62e204960d6b67c4f4a5dd316a2b5f
             </div>
+
           </div>
         </div>
 
@@ -243,3 +277,9 @@ class Financials extends Component {
 }
 
 export default Financials;
+<span style={{ float: "right", marginRight: 0 }}>
+                    <button className="btn  ">
+                      <GoGraph />
+                    </button>
+                  </span>
+import { GoGraph } from "react-icons/go";
