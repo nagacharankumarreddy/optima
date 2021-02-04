@@ -146,17 +146,10 @@
   justify-content: space-around;
   align-items: center;
 }
-<<<<<<< HEAD
-
-.main-left-bottom-left,.main-left-bottom-right {
-  background-color: rgb(238, 232, 73);
-  height: 220px;
-=======
 .main-left-bottom-left,
 .main-left-bottom-right {
   background-color: rgb(214, 214, 205);
   height: 400px;
->>>>>>> c020286f6e62e204960d6b67c4f4a5dd316a2b5f
   width: 47%;
   border-radius: 10px;
   display: flex;
