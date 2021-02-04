@@ -4,7 +4,7 @@ import {AiOutlineBell} from "react-icons/ai"
 import { IoIosContact } from "react-icons/io";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiWalletAlt } from "react-icons/bi";
-import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { RiArrowDropDownFill, RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GoGraph } from "react-icons/go";
 import { GiPiggyBank } from "react-icons/gi";
 import { CgMail } from "react-icons/cg";
@@ -22,7 +22,9 @@ function App() {
           </span>
         </div>
         <div className="header-right">
-          <IoIosContact className="contact" />
+          <IoIosContact className="contact" /> 
+          <span id="alice">Alice</span>
+          <RiArrowDropDownFill className="dropdown" />
           <GrLogout className="logout" />
         </div>
       </div>

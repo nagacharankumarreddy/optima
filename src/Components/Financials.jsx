@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import userdata from "../userdata.json";
  import image from "../assets/imgone.png";
-
+import { BiArrowFromLeft, BiArrowFromRight, BiArrowFromTop, BiBarChart, BiBarChartAlt, BiBarChartAlt2, BiBarChartSquare, BiChart } from "react-icons/bi";
+import { GoArrowRight } from "react-icons/go";
+import { GiChart, GiStaticWaves } from "react-icons/gi";
+import { RiBarChartGroupedFill } from "react-icons/ri";
+import { CgChart } from "react-icons/cg";
 const udata = userdata;
 class Financials extends Component {
   state = {};
   style = { position: "absolute", left: "114px", top: "53px" };
   render() {
+    
     return (
       
       <div className="main">
@@ -43,19 +48,35 @@ class Financials extends Component {
                 Looking for best option to maximize your savings and optimise
                 your expenses
               </p>
-              <button className="btn btn-warning btn-xs">
+              <button className="btn btn-success btn-xs">
                 {" "}
-                &nbsp;&nbsp;Yes&nbsp;&nbsp;
+                &nbsp;&nbsp;Yes&nbsp;<GoArrowRight className="yesarrow" />&nbsp;
               </button>
             </div>
           </div>
           <div className="main-left-bottom">
+
             <div className="main-left-bottom-left">
-              <h1>Debit data</h1>
+              <h1 id="debit">Debit accounts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BiBarChartAlt className="graph" /></h1>
             </div>
+
             <div className="main-left-bottom-right">
-              <h1>Credit Data</h1>
+
+             <div className="main-left-bottom-right-top">
+               <h1 id="credit">Credit accounts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BiBarChartAlt className="graph" /></h1>
+             </div>
+
+              <div className="main-left-bottom-right-middle">
+
+              </div>
+
+              <div className="main-left-bottom-right-bottom">
+               <button className="btn btn-success btn-xs" >{" "}
+               &nbsp;&nbsp;&nbsp;Optimize&nbsp;<GoArrowRight className="optimizearrow" /> &nbsp;&nbsp;&nbsp;</button>
+              </div>
+
             </div>
+
           </div>
         </div>
 
@@ -69,3 +90,9 @@ class Financials extends Component {
 }
 
 export default Financials;
+<span style={{ float: "right", marginRight: 0 }}>
+                    <button className="btn  ">
+                      <GoGraph />
+                    </button>
+                  </span>
+import { GoGraph } from "react-icons/go";
