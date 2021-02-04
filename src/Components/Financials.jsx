@@ -1,22 +1,30 @@
 import React, { Component } from "react";
 import userdata from "../userdata.json";
+<<<<<<< HEAD
  import image from "../assets/imgone.png";
 import { BiArrowFromLeft, BiArrowFromRight, BiArrowFromTop, BiBarChart, BiBarChartAlt, BiBarChartAlt2, BiBarChartSquare, BiChart } from "react-icons/bi";
 import { GoArrowRight } from "react-icons/go";
 import { GiChart, GiStaticWaves } from "react-icons/gi";
 import { RiBarChartGroupedFill } from "react-icons/ri";
 import { CgChart } from "react-icons/cg";
+=======
+ import creditdata from "../credit.json";
+import debitdata from "../debit.json";
+import { GoGraph } from "react-icons/go";
+
+>>>>>>> c020286f6e62e204960d6b67c4f4a5dd316a2b5f
 const udata = userdata;
 class Financials extends Component {
   state = {};
-  style = { position: "absolute", left: "114px", top: "53px" };
+
   render() {
     
     return (
-      
       <div className="main">
-        <h2 style={this.style}>My Financials</h2>
         <div className="main-left">
+          <div>
+            <h2>My Financials</h2>
+          </div>
           <div className="main-left-top">
             <div className="mltone">
               <span>Debit accounts</span>
@@ -39,7 +47,7 @@ class Financials extends Component {
               <span>Credit Outstanding</span>
               <br />
               <span className="tdi-digits">
-                &#8356; {udata.totalAvailableCreditBalance}{" "}
+                &#8356; {udata.totalAvailableCreditBalance}
               </span>
               <br />
             </div>
@@ -57,10 +65,101 @@ class Financials extends Component {
           <div className="main-left-bottom">
 
             <div className="main-left-bottom-left">
+<<<<<<< HEAD
               <h1 id="debit">Debit accounts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BiBarChartAlt className="graph" /></h1>
+=======
+              <div className="outer">
+                <div className="inner">
+                  <span
+                    style={{
+                      fontSize: "Larger",
+                      fontWeight: "500",
+                      marginLeft: 0,
+                    }}
+                  >
+                    <span>Debit Accounts</span>
+                  </span>
+                  <span style={{ float: "right", marginRight: 0 }}>
+                    <button className="btn  ">
+                      <GoGraph />
+                    </button>
+                  </span>
+                </div>
+                <div className="inner">
+                  <div className="inner-one">
+                    <div className="cardimage">
+                      <img
+                        src="./assets/Halifax@2x.png"
+                        alt="Halifax@2x"
+                        height="50px"
+                      />
+                    </div>
+                    <div>
+                      {debitdata.banks[0].bankName}
+                      <br />
+                      <span className="intRate">
+                        {debitdata.banks[0].accounts[0].interestRate}
+                        &#37;&nbsp;AER
+                      </span>
+                    </div>
+                  </div>
+                  <div className="inner-two">
+                    {debitdata.banks[0].accounts[0].accountType}
+                    &nbsp;|&nbsp;&#8356;{debitdata.banks[0].accounts[0].balance}
+                  </div>
+                </div>
+                <div className="inner">
+                  <div className="inner-one">
+                    <div className="cardimage">
+                      <img
+                        src="./assets/HSBC@2x.png"
+                        alt="HSBC@2x"
+                        height="50px"
+                      />
+                    </div>
+                    <div>
+                      {debitdata.banks[1].bankName}
+                      <br />
+                      <span className="intRate">
+                        {debitdata.banks[1].accounts[0].interestRate}
+                        &#37;&nbsp;AER
+                      </span>
+                    </div>
+                  </div>
+                  <div className="inner-two">
+                    {debitdata.banks[1].accounts[0].accountType}
+                    &nbsp;|&nbsp;&#8356;{debitdata.banks[1].accounts[0].balance}
+                  </div>
+                </div>
+              </div>
+              <div className="inner">
+                <div className="inner-one">
+                  <div className="cardimage">
+                    <img
+                      src="./assets/Barclays@2x.png"
+                      alt="Barclays@2x"
+                      height="50px"
+                    />
+                  </div>
+                  <div>
+                    {debitdata.banks[2].bankName}
+                    <br />
+                    <span className="intRate">
+                      {debitdata.banks[2].accounts[0].interestRate}
+                      &#37;&nbsp;AER
+                    </span>
+                  </div>
+                </div>
+                <div className="inner-two">
+                  {debitdata.banks[2].accounts[0].accountType}
+                  &nbsp;|&nbsp;&#8356;{debitdata.banks[2].accounts[0].balance}
+                </div>
+              </div>
+>>>>>>> c020286f6e62e204960d6b67c4f4a5dd316a2b5f
             </div>
 
             <div className="main-left-bottom-right">
+<<<<<<< HEAD
 
              <div className="main-left-bottom-right-top">
                <h1 id="credit">Credit accounts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BiBarChartAlt className="graph" /></h1>
@@ -75,6 +174,95 @@ class Financials extends Component {
                &nbsp;&nbsp;&nbsp;Optimize&nbsp;<GoArrowRight className="optimizearrow" /> &nbsp;&nbsp;&nbsp;</button>
               </div>
 
+=======
+            <div className="outer">
+                <div className="inner">
+                  <span
+                    style={{
+                      fontSize: "Larger",
+                      fontWeight: "500",
+                      marginLeft: 0,
+                    }}
+                  >
+                    <span>Credit Accounts</span>
+                  </span>
+                  <span style={{ float: "right", marginRight: 0 }}>
+                    <button className="btn  ">
+                      <GoGraph />
+                    </button>
+                  </span>
+                </div>
+                <div className="inner">
+                  <div className="inner-one">
+                    <div className="cardimage">
+                      <img
+                        src="./assets/NatWest@2x.png"
+                        alt="NatWest@2x"
+                        height="50px"
+                      />
+                    </div>
+                    <div>
+                      {creditdata.banks[0].bankName}
+                      <br />
+                      <span className="intRate">
+                        {creditdata.banks[0].accounts[0].apr}
+                        &#37;&nbsp;APR
+                      </span>
+                    </div>
+                  </div>
+                  <div className="inner-two">
+                    {creditdata.banks[0].accounts[0].accountType}
+                    &nbsp;|&nbsp;&#8356;{creditdata.banks[0].accounts[0].totalBalanceDue}
+                  </div>
+                </div>
+                <div className="inner">
+                  <div className="inner-one">
+                    <div className="cardimage">
+                      <img
+                        src="./assets/RBS@2x.png"
+                        alt="Halifax@2x"
+                        height="50px"
+                      />
+                    </div>
+                    <div>
+                      {creditdata.banks[1].bankName}
+                      <br />
+                      <span className="intRate">
+                        {creditdata.banks[1].accounts[0].apr}
+                        &#37;&nbsp;APR
+                      </span>
+                    </div>
+                  </div>
+                  <div className="inner-two">
+                    {creditdata.banks[1].accounts[0].accountType}
+                    &nbsp;|&nbsp;&#8356;{creditdata.banks[1].accounts[0].totalBalanceDue}
+                  </div>
+                </div>
+              </div>
+              <div className="inner">
+                <div className="inner-one">
+                  <div className="cardimage">
+                    <img
+                      src="./assets/Barclays2@2x.png"
+                      alt="Halifax@2x"
+                      height="50px"
+                    />
+                  </div>
+                  <div>
+                    {creditdata.banks[2].bankName}
+                    <br />
+                    <span className="intRate">
+                      {creditdata.banks[2].accounts[0].interestRate}
+                      &#37;&nbsp;APR
+                    </span>
+                  </div>
+                </div>
+                <div className="inner-two">
+                  {creditdata.banks[2].accounts[0].accountType}
+                  &nbsp;|&nbsp;&#8356;{creditdata.banks[2].accounts[0].minMonthlyPayment}
+                </div>
+              </div>
+>>>>>>> c020286f6e62e204960d6b67c4f4a5dd316a2b5f
             </div>
 
           </div>
@@ -82,7 +270,6 @@ class Financials extends Component {
 
         <div className="main-right">
           <img src="./assets/imgone.png" alt="" className="image" />
-          {/* <img src={"image"} alt="cant load" height="140px" width="50px"/> */}
         </div>
       </div>
     );
