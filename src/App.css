@@ -15,6 +15,7 @@
   margin-top: 3px;
   margin-bottom: 3px;
   display: flex;
+  
 }
 #main-head {
   text-transform: uppercase;
@@ -22,6 +23,7 @@
   color: red;
   font-weight: bold;
 }
+
 #sub {
   font-size: smaller;
   font-style: italic;
@@ -30,11 +32,19 @@
 #bell {
   float: right;
 }
-.contact,
+
 .logout {
   height: 40px;
   width: 10rem;
   float: right;
+}
+.contact {
+  height: 40px;
+  width: 10rem;
+  float: right;
+  padding-left: 1em;
+  padding-right:0em;
+
 }
 .menu {
   width: 4%;
@@ -133,10 +143,41 @@
   justify-content: space-around;
   align-items: center;
 }
+
 .main-left-bottom-left,.main-left-bottom-right {
   background-color: rgb(238, 232, 73);
   height: 220px;
   width: 47%;
   border-radius: 10px;
+}
+
+.main-left-bottom-right-bottom {
+  padding-top: 8em;
+  padding-left:11em;
+  padding-bottom: 1em;
+  
+}
+
+.dropdown {
+  height: 40px;
+  width: 10rem;
+  padding-right: 4em;
+  padding-left:0em;
+}
+
+#alice {
+  font-size: larger;
+  vertical-align: middle;
+  padding-left:2em;
+  padding-right: 0em;
+  padding-top: 0.25em;
+ ;
+}
+
+
+#credit , #debit 
+{ padding-top: 0.5em;
+  padding-left: 0.5em;
+  font-size: 150%;
 }
 
