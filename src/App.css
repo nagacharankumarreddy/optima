@@ -15,7 +15,6 @@
   margin-top: 3px;
   margin-bottom: 3px;
   display: flex;
-  
 }
 #main-head {
   text-transform: uppercase;
@@ -43,8 +42,7 @@
   width: 10rem;
   float: right;
   padding-left: 1em;
-  padding-right:0em;
-
+  padding-right: 0em;
 }
 .menu {
   width: 4%;
@@ -93,7 +91,7 @@
 }
 .main-right {
   background-color: rgb(119, 170, 172);
-  height: 450px;
+  height: 600px;
   width: 20%;
   margin-top: 30px;
 }
@@ -110,10 +108,10 @@
   padding: 10px;
   background-image: linear-gradient(
     to bottom right,
-    violet,
-    orange,
-    rgb(139, 86, 104),
-    green
+    rgb(3, 125, 53),
+    rgb(3, 71, 51),
+    rgb(6, 70, 51),
+    rgb(6, 82, 90)
   );
   align-items: flex-start;
 }
@@ -144,33 +142,49 @@
   display: flex;
   height: 450px;
   justify-content: space-around;
-  align-items: center;
 }
 .main-left-bottom-left,
 .main-left-bottom-right {
-  background-color: rgb(214, 214, 205);
-  height: 420px;
+ 
+  height: 470px;
   width: 47%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(255, 255, 255);
+  font-family: Roboto, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+  border-radius: 5px;
 }
 
-.cardimage {
-  clear:both;
-  height: 110px;
-}
-.inner{
+.inner {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+
+  height: 90px;
 }
-.inner-one{
+.inner-head {
   display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+ 
 }
-.inner-two{
-  vertical-align:bottom
+.inner {
+  height: 120px;
 }
-.intRate{
+.inner-one {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+.inner-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+}
+.intRate {
   font-weight: 700;
 }
 
@@ -178,25 +192,18 @@
   height: 40px;
   width: 10rem;
   padding-right: 4em;
-  padding-left:0em;
+  padding-left: 0em;
 }
 
 #alice {
   font-size: larger;
   vertical-align: middle;
-  padding-left:2em;
+  padding-left: 2em;
   padding-right: 0em;
   padding-top: 0.25em;
- 
 }
-.inner-opt-button{
-  align-self: flex-end;
+.inner-opt-button {
+  display: flex;
+  justify-content: flex-end;
   padding-right: 10px;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
 }
-
-
-
-
-
