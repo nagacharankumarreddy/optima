@@ -7,9 +7,9 @@ import { GoGraph } from "react-icons/go";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 const udata = userdata;
 
+
 class Financials extends Component {
   state = {};
-
   render() {
     return (
       <div className="main">
@@ -183,10 +183,10 @@ class Financials extends Component {
                     <span style={{ color: "red" }}>
                       <BsFillInfoCircleFill />
                     </span>
-                    <span>
-                      {/* {(this.due - new Date().setDate(new Date().getDate())) /
-                        86400000} */}
-                    </span>
+                    {/* <span>
+                      {(  new Date().setDate(new Date().getDate())) /
+                        86400000}
+                    </span> */}
                   </div>
                 </div>
                 <div className="inner-two">

@@ -1,14 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import {AiOutlineBell} from "react-icons/ai"
-import { IoIosContact } from "react-icons/io";
 import { AiOutlineHome } from "react-icons/ai";
 import { BiWalletAlt } from "react-icons/bi";
-import { RiArrowDropDownFill, RiMoneyDollarCircleLine } from "react-icons/ri";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GoGraph } from "react-icons/go";
 import { GiPiggyBank } from "react-icons/gi";
 import { CgMail } from "react-icons/cg";
-import { GrLogout } from "react-icons/gr";
 import Financials from "./Components/Financials.jsx";
 
 function App() {
@@ -19,14 +16,19 @@ function App() {
           <span id="main-head">optima</span>
           <span id="sub">Pay Less,Save More</span>
           <span id="bell">
-            <AiOutlineBell/>
+            <img src="./assets/bell.png" alt="" height="30px" />
           </span>
         </div>
         <div className="header-right">
-          <IoIosContact className="contact" /> 
-          <span id="alice">Alice</span>
-          <RiArrowDropDownFill className="dropdown" />
-          <GrLogout className="logout" />
+          <img src="./assets/contact.jpeg" alt="" height="30px" />
+          <select name="users" id="users">
+            <option value="Alice">Alice</option>
+            <option value="Vinod">Vinod</option>
+            <option value="Laxmi">Laxmi</option>
+            <option value="Megha">Megha</option>
+            <option value="Charan">Charan</option>
+          </select>
+          <img src="./assets/logout.png" alt="" height="20px" />
         </div>
       </div>
       <div>
@@ -54,11 +56,7 @@ function App() {
       <div>
         <div>
           <Router>
-            
-            <Route path="/home" default  component={Financials} />
-            <Route path="/test" default  component={Financials} />
-            <Route path="/test" default  component={Financials} />
-
+            <Route path="/home" default component={Financials} />
           </Router>
         </div>
       </div>
