@@ -5,8 +5,9 @@ import creditdata from "../credit.json";
 import debitdata from "../debit.json";
 import { GoGraph } from "react-icons/go";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import ReactTooltip from "react-tooltip";
+import Halifax from "./Halifax";
 const udata = userdata;
-
 
 class Financials extends Component {
   state = {};
@@ -15,7 +16,7 @@ class Financials extends Component {
       <div className="main">
         <div className="main-left">
           <div>
-            <h2>My Financials</h2>
+            <h2>&nbsp;&nbsp;&nbsp;My Financials</h2>
           </div>
           <div className="main-left-top">
             <div className="mltone">
@@ -75,7 +76,7 @@ class Financials extends Component {
                 </div>
               </div>
               <div className="inner">
-                <div className="inner-one">
+                 <div className="inner-one" data-tip data-for="halifax" data-effect="solid"  data-background-color="white">
                   <div className="cardimage">
                     <img
                       src="./assets/Halifax@2x.png"
@@ -91,6 +92,9 @@ class Financials extends Component {
                       &#37;&nbsp;AER
                     </span>
                   </div>
+                  <ReactTooltip id="halifax">
+                    <Halifax/>
+                  </ReactTooltip>
                 </div>
                 <div className="inner-two">
                   {debitdata.banks[0].accounts[0].accountType}
@@ -183,10 +187,10 @@ class Financials extends Component {
                     <span style={{ color: "red" }}>
                       <BsFillInfoCircleFill />
                     </span>
-                    {/* <span>
-                      {(  new Date().setDate(new Date().getDate())) /
-                        86400000}
-                    </span> */}
+                     <span>
+                      {(eval(creditdata.banks[0].accounts[0].dueDate)-new Date().setDate(new Date().getDate())) /
+                        86400000} Days
+                    </span> 
                   </div>
                 </div>
                 <div className="inner-two">
@@ -215,6 +219,10 @@ class Financials extends Component {
                     <span style={{ color: "red" }}>
                       <BsFillInfoCircleFill />
                     </span>
+                    <span>
+                      {(eval(creditdata.banks[1].accounts[0].dueDate)-new Date().setDate(new Date().getDate())) /
+                        86400000} Days
+                    </span> 
                   </div>
                 </div>
                 <div className="inner-two">
@@ -244,6 +252,10 @@ class Financials extends Component {
                     <span style={{ color: "red" }}>
                       <BsFillInfoCircleFill />
                     </span>
+                    <span>
+                      {(eval(creditdata.banks[2].accounts[0].dueDate)-new Date().setDate(new Date().getDate())) /
+                        86400000} Days
+                    </span> 
                   </div>
                 </div>
                 <div className="inner-two">
@@ -267,7 +279,9 @@ class Financials extends Component {
         <div className="main-right">
           <img src="./assets/imgone.png" alt="" className="image" />
         </div>
+       
       </div>
+      
     );
   }
 }
