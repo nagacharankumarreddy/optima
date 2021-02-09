@@ -7,6 +7,7 @@ import { GoGraph } from "react-icons/go";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import ReactTooltip from "react-tooltip";
 import Halifax from "./Halifax";
+import Hsbc from "./Hsbc";
 const udata = userdata;
 
 class Financials extends Component {
@@ -75,8 +76,8 @@ class Financials extends Component {
                   </button>
                 </div>
               </div>
-              <div className="inner">
-                 <div className="inner-one" data-tip data-for="halifax" data-effect="solid"  data-background-color="white">
+              <div className="inner" data-tip="tooltip" data-for="halifax" data-effect="solid" data-border="true" borderColor="black"  data-background-color="white">
+                 <div className="inner-one" >
                   <div className="cardimage">
                     <img
                       src="./assets/Halifax@2x.png"
@@ -92,8 +93,9 @@ class Financials extends Component {
                       &#37;&nbsp;AER
                     </span>
                   </div>
-                  <ReactTooltip id="halifax">
-                    <Halifax/>
+  
+                  <ReactTooltip id="halifax" >
+                    <Halifax />
                   </ReactTooltip>
                 </div>
                 <div className="inner-two">
@@ -101,7 +103,7 @@ class Financials extends Component {
                   &nbsp;|&nbsp;&#8356;{debitdata.banks[0].accounts[0].balance}
                 </div>
               </div>
-              <div className="inner">
+              <div className="inner" data-tip="tooltip" data-for="hsbc" data-effect="solid" data-border="true" borderColor="black"  data-background-color="white">
                 <div className="inner-one">
                   <div className="cardimage">
                     <img
@@ -123,6 +125,9 @@ class Financials extends Component {
                   {debitdata.banks[1].accounts[0].accountType}
                   &nbsp;|&nbsp;&#8356;{debitdata.banks[1].accounts[0].balance}
                 </div>
+                <ReactTooltip id="hsbc" >
+                    <Hsbc />
+                  </ReactTooltip>
               </div>
 
               <div className="inner">
@@ -276,7 +281,7 @@ class Financials extends Component {
           </div>
         </div>
 
-        <div className="main-right">
+        <div className="main-right" >
           <img src="./assets/imgone.png" alt="" className="image" />
         </div>
        
