@@ -208,29 +208,37 @@
   justify-content: center;
   align-items: center;
 }
-.debit-card-main {
-  width: 100%;
-  background-color: #fff;
-  height: 110px;
+.hover-card-main {
+  width: 120%;
+  height: 150px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .hover-text-left {
   color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 600;
   font-size: small;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 168px;
+  
 }
-
 .hover-text-right {
   color: black;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 300;
+  font-weight: 600;
   font-size: small;
+  width: 160px;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .livechat {
@@ -239,5 +247,5 @@
   top: 476px;
 }
 .head{
-  font-weight: 600;
+  font-weight: 300;
 }

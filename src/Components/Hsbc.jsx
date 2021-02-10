@@ -5,7 +5,7 @@ class Hsbc extends Component {
   state = {};
   render() {
     return (
-      <div className="debit-card-main">
+      <div className="hover-card-main">
         <div>
           <img src="./assets/HSBC@2x.png" alt="HSBC@2x" height="110px" />
         </div>

@@ -9,6 +9,10 @@ import ReactTooltip from "react-tooltip";
 import Halifax from "./Halifax";
 import Hsbc from "./Hsbc";
 import BarclaysDebit from "./BarclaysDebit";
+import Natwest from "./NatWest";
+import Rbs from "./Rbs";
+import BarclaysCredit from "./BarclaysCredit";
+
 const udata = userdata;
 
 class Financials extends Component {
@@ -102,14 +106,15 @@ class Financials extends Component {
                       </span>
                     </div>
 
-                    <ReactTooltip id="halifax">
-                      <Halifax />
-                    </ReactTooltip>
+                    
                   </div>
                   <div className="inner-two">
                     {debitdata.banks[0].accounts[0].accountType}
                     &nbsp;|&nbsp;&#8356;{debitdata.banks[0].accounts[0].balance}
                   </div>
+                  <ReactTooltip id="halifax">
+                      <Halifax />
+                    </ReactTooltip>
                 </div>
                 <div
                   className="inner "
@@ -193,7 +198,10 @@ class Financials extends Component {
                     </button>
                   </div>
                 </div>
-                <div className="inner">
+                <div className="inner" data-tip="tooltip"
+                  data-for="natwest"
+                  data-effect="solid"
+                  data-background-color="white">
                   <div className="inner-one">
                     <div className="cardimage">
                       <img
@@ -210,7 +218,7 @@ class Financials extends Component {
                         &#37;&nbsp;APR
                       </span>
                       <br />
-                      <span style={{ color: "brown" }}>
+                      <span style={{ color: "rgb(255,93,100)" }}>
                         <BsFillInfoCircleFill />
                       </span>
                       <span>
@@ -226,8 +234,14 @@ class Financials extends Component {
                     &nbsp;|&nbsp;&#8356;
                     {creditdata.banks[0].accounts[0].totalBalanceDue}
                   </div>
+                  <ReactTooltip id="natwest">
+                    <Natwest/>  
+                    </ReactTooltip>
                 </div>
-                <div className="inner">
+                <div className="inner" data-tip="tooltip"
+                  data-for="rbs"
+                  data-effect="solid"
+                  data-background-color="white">
                   <div className="inner-one">
                     <div className="cardimage">
                       <img
@@ -244,7 +258,7 @@ class Financials extends Component {
                         &#37;&nbsp;APR
                       </span>
                       <br />
-                      <span style={{ color: "brown" }}>
+                      <span style={{ color: "rgb(255,93,100)" }}>
                         <BsFillInfoCircleFill />
                       </span>
                       <span>
@@ -260,9 +274,15 @@ class Financials extends Component {
                     &nbsp;|&nbsp;&#8356;
                     {creditdata.banks[1].accounts[0].totalBalanceDue}
                   </div>
+                  <ReactTooltip id="rbs">
+                    <Rbs/>
+                    </ReactTooltip>
                 </div>
 
-                <div className="inner">
+                <div className="inner" data-tip="tooltip"
+                  data-for="barclayscredit"
+                  data-effect="solid"
+                  data-background-color="white">
                   <div className="inner-one">
                     <div className="cardimage">
                       <img
@@ -279,13 +299,13 @@ class Financials extends Component {
                         &#37;&nbsp;APR
                       </span>
                       <br />
-                      <span style={{ color: "brown" }}>
+                      <span style={{ color: "rgb(255,93,100)" }}>
                         <BsFillInfoCircleFill />
                       </span>
                       <span>
                         {(eval(creditdata.banks[2].accounts[0].dueDate) -
                           new Date().setDate(new Date().getDate())) /
-                          86400000}{" "}
+                          86400000}
                         Days
                       </span>
                     </div>
@@ -295,6 +315,9 @@ class Financials extends Component {
                     &nbsp;|&nbsp;&#8356;
                     {creditdata.banks[2].accounts[0].minMonthlyPayment}
                   </div>
+                  <ReactTooltip id="barclayscredit">
+                    <BarclaysCredit />  
+                    </ReactTooltip>
                 </div>
                 <div className="inner-opt-button">
                   <div>

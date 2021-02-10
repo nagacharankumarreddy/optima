@@ -6,7 +6,7 @@ class Halifax extends Component {
 
   render() {
     return (
-      <div className="debit-card-main">
+      <div className="hover-card-main">
         <div>
           <img src="./assets/Halifax@2x.png" alt="Halifax@2x" height="110px"  />
         </div>
