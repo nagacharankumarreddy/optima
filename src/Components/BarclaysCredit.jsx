@@ -1,9 +1,25 @@
 import React, { Component } from "react";
 import creditdata from "../credit.json";
-
 class BarclaysCredit extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = { data: []};
+    this.getCreditData = this.getCreditData.bind(this);
+  }
+
+  async componentDidMount(){
+    var getVal = await this.getCreditData();
+    this.setState({ data: getVal });
+    console.log(this.state);
+  }
+
+  async getCreditData() {
+    const response = await fetch('http://localhost:8000/credit');
+    const json = await response.json();
+    return json;
+  }
   render() {
+    if(this.state.data[0]){
     return (
       <div className="hover-card-main">
         <div>
@@ -37,6 +53,17 @@ class BarclaysCredit extends Component {
       </div>
     );
   }
+  else{
+    return (<h1  >
+<div class="spinner-grow text-muted"></div>
+<span style={{
+      fontSize: "20px",
+      color:"black"
+    }}>Loading..</span>
+
+</h1>  )
+  }
+}
 }
 
 export default BarclaysCredit;
