@@ -59,7 +59,6 @@ class Natwest extends Component {
         fontSize: "20px",
         color:"black"
       }}>Loading..</span>
-  
   </h1>  )
     }
   }

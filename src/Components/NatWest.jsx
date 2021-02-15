@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-
 class Natwest extends Component {
-
   constructor(props) {
     super(props);
     this.state = { data: []};
     this.getCreditData = this.getCreditData.bind(this);
   }
-
   async componentDidMount(){
     var getVal = await this.getCreditData();
     this.setState({ data: getVal });
