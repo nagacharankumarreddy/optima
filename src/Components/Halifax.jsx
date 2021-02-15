@@ -1,10 +1,26 @@
 import React, { Component } from "react";
 import debitdata from "../debit.json";
-
 class Halifax extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = { data: []};
+    this.getDebitData = this.getDebitData.bind(this);
+  }
+
+  async componentDidMount(){
+    var getVal = await this.getDebitData();
+    this.setState({ data: getVal });
+    console.log(this.state);
+  }
+
+  async getDebitData() {
+    const response = await fetch('http://localhost:8000/debit');
+    const json = await response.json();
+    return json;
+  }
 
   render() {
+    if(this.state.data[0]){
     return (
       <div className="hover-card-main">
         <div>
@@ -31,6 +47,17 @@ class Halifax extends Component {
       </div>
     );
   }
+  else{
+    return (<h1  >
+<div class="spinner-grow text-muted"></div>
+<span style={{
+      fontSize: "20px",
+      color:"black"
+    }}>Loading..</span>
+
+</h1>  )
+  }
+}
 }
 
 export default Halifax;
