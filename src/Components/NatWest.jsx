@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import creditdata from "../credit.json";
 
 class Natwest extends Component {
 
@@ -31,7 +30,7 @@ class Natwest extends Component {
           <div className="hover-text-left">
             <div>
               <div className="head">Banks</div>
-              <div>{this.state.data[0].banks[0].bankName}</div>
+              <div>{this.state.data[0].banks[1].bankName}</div>
             </div>
             <div>
               <div className="head">Credit limit</div>
@@ -58,7 +57,14 @@ class Natwest extends Component {
       );
     }
     else{
-      return (<h1>Please wait loading...</h1>)
+      return (<h1  >
+  <div class="spinner-grow text-muted"></div>
+  <span style={{
+        fontSize: "20px",
+        color:"black"
+      }}>Loading..</span>
+  
+  </h1>  )
     }
   }
 }

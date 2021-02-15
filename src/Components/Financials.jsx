@@ -51,6 +51,8 @@ class Financials extends Component {
                 </span>
                 <br />
               </div>
+              <div className="vertical"></div>
+
               <div className="mltthree">
                 <p id="mltthree-text">
                   Looking for best option to maximize your savings and optimise

@@ -28,7 +28,10 @@ function App() {
             <option value="Megha">Megha</option>
             <option value="Charan">Charan</option>
           </select>
-          <img src="./assets/logout.png" alt="" height="20px" />
+        <div className="btn">
+        <img src="./assets/logout.png" alt="" height="29px" /> 
+        </div>
+
         </div>
       </div>
       <div>
