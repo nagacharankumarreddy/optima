@@ -30,7 +30,7 @@ class Natwest extends Component {
           <div className="hover-text-left">
             <div>
               <div className="head">Banks</div>
-              <div>{this.state.data[0].banks[1].bankName}</div>
+              <div>{this.state.data[0].banks[0].bankName}</div>
             </div>
             <div>
               <div className="head">Credit limit</div>
