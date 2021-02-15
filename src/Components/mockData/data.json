@@ -20,6 +20,7 @@
         {
           "bankName": "NatWest",
           "bankId": "NNaattWWeesstt",
+          "cardimage":"credit1.png",
           "accounts": [
             {
               "accountType": "CC",
@@ -37,6 +38,7 @@
         {
           "bankName": "RBS",
           "bankId": "RRBBSS",
+          "cardimage":"credit2.png",
           "accounts": [
             {
               "accountType": "CC",
@@ -54,6 +56,7 @@
         {
           "bankName": "Barclays",
           "bankId": "BBaarrccllaayyss",
+          "cardimage":"credit3.png",
           "accounts": [
             {
               "accountType": "M",
@@ -80,6 +83,7 @@
         {
           "bankName": "Halifax",
           "bankId": "HHaalliiffaaxx",
+          "cardimage":"debit1.png",
           "accounts": [
             {
               "accountType": "SB",
@@ -118,6 +122,7 @@
         {
           "bankName": "HSBC",
           "bankId": "HHSSBBCC",
+          "cardimage":"debit2.png",
           "accounts": [
             {
               "accountType": "PCA",
@@ -150,6 +155,7 @@
         {
           "bankName": "Barclays",
           "bankId": "BBaarrccllaayyss",
+          "cardimage":"debit3.png",
           "accounts": [
             {
               "accountType": "SB",

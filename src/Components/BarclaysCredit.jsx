@@ -55,7 +55,7 @@ class BarclaysCredit extends Component {
     );}
     else{
       return (<h1  >
-        <div class="spinner-grow text-muted"></div>
+        <div className="spinner-grow text-muted"></div>
         <span style={{
               fontSize: "20px",
               color:"black"

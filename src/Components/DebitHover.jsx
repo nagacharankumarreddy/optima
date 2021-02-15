@@ -1,48 +1,34 @@
 import React, { Component } from "react";
 
 class Halifax extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { data: []};
-    this.getDebitData = this.getDebitData.bind(this);
-  }
 
-  async componentDidMount(){
-    var getVal = await this.getDebitData();
-    this.setState({ data: getVal });
-    console.log(this.state);
-  }
-
-  async getDebitData() {
-    const response = await fetch('http://localhost:8000/debit');
-    const json = await response.json();
-    return json;
-  }
-
+ 
   render() {
-    if(this.state.data[0]){
+    if(this.props.bankdetails){
+      const bank = this.props.bankdetails;
     return (
+      
       <div className="hover-card-main">
         <div>
-          <img src="./assets/Halifax@2x.png" alt="Halifax@2x" height="110px"  />
+          <img src={`./assets/${bank.cardimage}`} alt="Halifax@2x" height="110px"  />
         </div>
         <div className="hover-text-left">
           <div>
             <div className="head">Banks</div>
-            <div>{this.state.data[0].banks[0].bankName}</div>
+            <div>{bank.bankName}</div>
           </div>
           <div>
             <div className="head">Standing Instructions</div>
-            <div> &#8356;{this.state.data[0].banks[0].accounts[0].standingInst}</div>
+            <div> &#8356;{bank.accounts[0].standingInst}</div>
           </div>
           <div>
             <div className="head">Min Balance</div>
-            <div> &#8356;{this.state.data[0].banks[0].accounts[0].minBalance}</div>
+            <div> &#8356;{bank.accounts[0].minBalance}</div>
           </div>
         </div>
         <div className="hover-text-right">
           <div className="head">Available Balance</div>
-          <div>&#8356;{this.state.data[0].banks[0].accounts[0].balance}</div>
+          <div>&#8356;{bank.accounts[0].balance}</div>
         </div>
       </div>
     );

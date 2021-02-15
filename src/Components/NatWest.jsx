@@ -54,8 +54,8 @@ class Natwest extends Component {
       );
     }
     else{
-      return (<h1  >
-  <div class="spinner-grow text-muted"></div>
+      return (<h1>
+  <div className="spinner-grow text-muted"></div>
   <span style={{
         fontSize: "20px",
         color:"black"
