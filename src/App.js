@@ -22,13 +22,9 @@ function App() {
         <div className="header-right">
           <img src="./assets/contact.jpeg" alt="" height="30px" />
           <select name="users" id="users">
-            <option value="Alice">Alice</option>
-            <option value="Vinod">Vinod</option>
-            <option value="Laxmi">Laxmi</option>
-            <option value="Megha">Megha</option>
-            <option value="Charan">Charan</option>
+            <option value="Alice">Alice</option>  
           </select>
-        <div className="btn">
+        <div className="btn" onClick="">
         <img src="./assets/logout.png" alt="" height="29px" /> 
         </div>
 
@@ -39,7 +35,7 @@ function App() {
           <a href="/home" className="active">
             <AiOutlineHome />
           </a>
-          <a href="/test">
+          <a href="/">
             <BiWalletAlt />
           </a>
           <a href="/">
@@ -59,8 +55,18 @@ function App() {
       <div>
         <div>
           <Router>
-            <Route path="/home" default component={Financials} />
+            <Route path="/home"  component={Financials} />
           </Router>
+          {/*For Remaining Nav Buttons
+           <Router>
+            <Route path="/"  component={} />
+          </Router>
+          <Router>
+            <Route path="/"  component={} />
+          </Router>
+          <Router>
+            <Route path="/"  component={} />
+          </Router> */}
         </div>
       </div>
     </div>
