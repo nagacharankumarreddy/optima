@@ -1,3 +1,7 @@
+body{
+  font-size: 15px !important;
+}
+
 .Header {
   display: flex;
 }
@@ -234,7 +238,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   font-size: small;
-  width: 160px;
+  width: 200px;
   height: 168px;
   display: flex;
   flex-direction: column;
@@ -249,20 +253,4 @@
 }
 .head{
   font-weight: 300;
-}
-
-@media only screen and (max-width: 600px) {
-  .main {
-    background-color: green;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .main {
-    display: flex;
-    flex-direction: column;
-  }
-  .main-left-top{
-    display: flex;
-    flex-direction:column
-  }
 }

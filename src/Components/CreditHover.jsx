@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 class CreditHover extends Component {
   state = {}
-
-
-
   render() {
     let minbalance, showdue;
     if (this.props.bankdetails.accounts[0].minBalanceDue) {
@@ -17,7 +14,7 @@ class CreditHover extends Component {
       const bank = this.props.bankdetails;
       return (<div className="hover-card-main">
         <div>
-          <img src={`./assets/${bank.cardimage}`} alt="Halifax@2x" height="110px" />
+          <img src={`./assets/${bank.cardimage}`} alt={bank.bankName} height="110px" />
         </div>
         <div className="hover-text-left ">
           <div>

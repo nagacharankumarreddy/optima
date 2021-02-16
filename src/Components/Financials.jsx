@@ -1,27 +1,37 @@
 import React, { Component } from "react";
-import udata from "../userdata.json";
+import ReactTooltip from "react-tooltip";
 import DebitHover from "./DebitHover";
+import CreditHover from "./CreditHover";
 import { GoArrowRight } from "react-icons/go";
 import { GoGraph } from "react-icons/go";
 import { BsFillInfoCircleFill } from "react-icons/bs";
-import ReactTooltip from "react-tooltip";
-import CreditHover from "./CreditHover";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 class Financials extends Component {
   constructor(props) {
     super(props);
     this.state =
     {
+      userdata: [],
       debit: [],
       credit: []
     };
+    this.getUserData = this.getUserData.bind(this);
     this.getDebitData = this.getDebitData.bind(this);
     this.getCreditData = this.getCreditData.bind(this);
   }
 
   async componentDidMount() {
+    var getUserDetails = await this.getUserData();
     var getDebitVal = await this.getDebitData();
     var getCreditVal = await this.getCreditData();
-    this.setState({ debit: getDebitVal, credit: getCreditVal });
+    this.setState({ userdata: getUserDetails, debit: getDebitVal, credit: getCreditVal });
+  }
+
+  async getUserData() {
+    const response = await fetch('http://localhost:8000/userdata');
+    const json = await response.json();
+    return json;
   }
 
   async getDebitData() {
@@ -36,7 +46,8 @@ class Financials extends Component {
   }
 
   render() {
-    if (this.state.debit[0] && this.state.credit[0]) {
+    if (this.state.userdata[0] && this.state.debit[0] && this.state.credit[0]) {
+      const userdata = this.state.userdata[0];
       return (
         <div>
           <div className="main">
@@ -48,11 +59,11 @@ class Financials extends Component {
                 <div className="mltone">
                   <span>Debit accounts</span>
                   <br />
-                  <span className="tdi-digits">{udata.noOfDebitAccounts}</span>
+                  <span className="tdi-digits">{userdata.noOfDebitAccounts}</span>
                   <br />
                   <span>Credit accounts</span>
                   <br />
-                  <span className="tdi-digits">{udata.noOfCreditAccounts} </span>
+                  <span className="tdi-digits">{userdata.noOfCreditAccounts} </span>
                   <br />
                 </div>
                 <div className="vertical"></div>
@@ -60,13 +71,13 @@ class Financials extends Component {
                   <span>Debit balance</span>
                   <br />
                   <span className="tdi-digits">
-                    &#8356; {udata.totalAvailableDebitBalance}
+                    &#8356; {userdata.totalAvailableDebitBalance}
                   </span>
                   <br />
                   <span>Credit Outstanding</span>
                   <br />
                   <span className="tdi-digits">
-                    &#8356; {udata.totalAvailableCreditBalance}
+                    &#8356; {userdata.totalAvailableCreditBalance}
                   </span>
                   <br />
                 </div>
@@ -217,7 +228,18 @@ class Financials extends Component {
               </div>
             </div>
             <div className="main-right">
-              <img src="./assets/imgone.png" alt="" className="image" />
+               <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} useKeyboardArrows={true}>
+                <div>
+                    <img src="./assets/imgone.png" alt="" className="image" />
+                </div>
+                <div>
+                    <img src="./assets/imgone.png" alt="" className="image" />
+                </div>
+                <div>
+                    <img src="./assets/imgone.png" alt="" className="image" />
+                </div>
+            </Carousel> 
+
             </div>
           </div>
           <div className="livechat">
