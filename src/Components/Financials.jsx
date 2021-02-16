@@ -5,6 +5,8 @@ import CreditHover from "./CreditHover";
 import { GoArrowRight } from "react-icons/go";
 import { GoGraph } from "react-icons/go";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 class Financials extends Component {
   constructor(props) {
     super(props);
@@ -226,38 +228,17 @@ class Financials extends Component {
               </div>
             </div>
             <div className="main-right">
-              <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="1000">
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-
-                <div class="carousel-inner" data-interval="1000">
-                  <div class="item active">
+               <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} useKeyboardArrows={true}>
+                <div>
                     <img src="./assets/imgone.png" alt="" className="image" />
-
-                  </div>
-
-                  <div class="item">
-                    <img src="./assets/imgone.png" alt="" className="image" />
-
-                  </div>
-
-                  <div class="item">
-                    <img src="./assets/imgone.png" alt="" className="image" />
-                  </div>
                 </div>
-
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
+                <div>
+                    <img src="./assets/imgone.png" alt="" className="image" />
+                </div>
+                <div>
+                    <img src="./assets/imgone.png" alt="" className="image" />
+                </div>
+            </Carousel> 
 
             </div>
           </div>

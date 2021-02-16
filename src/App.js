@@ -22,9 +22,11 @@ function App() {
         <div className="header-right">
           <img src="./assets/contact.jpeg" alt="" height="30px" />
           <select name="users" id="users">
-            <option value="Alice">Alice</option>  
+          <option value="alice">Alice</option>  
+            <option value="bob">Bob</option>  
           </select>
-        <div className="btn" onClick="">
+          
+        <div className="btn">
         <img src="./assets/logout.png" alt="" height="29px" /> 
         </div>
 

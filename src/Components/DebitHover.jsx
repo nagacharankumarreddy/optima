@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Halifax extends Component {
+class DebitHover extends Component {
 
   render() {
     if (this.props.bankdetails) {
@@ -9,7 +9,7 @@ class Halifax extends Component {
 
         <div className="hover-card-main">
           <div>
-            <img src={`./assets/${bank.cardimage}`} alt="Halifax@2x" height="110px" />
+            <img src={`./assets/${bank.cardimage}`} alt={bank.bankName} height="110px" />
           </div>
           <div className="hover-text-left">
             <div>
@@ -45,4 +45,4 @@ class Halifax extends Component {
   }
 }
 
-export default Halifax;
+export default DebitHover;
