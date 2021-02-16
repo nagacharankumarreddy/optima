@@ -1,5 +1,5 @@
 {
-  "userdata":[
+  "userdata": [
     {
       "username": "alice",
       "noOfDebitAccounts": 3,
@@ -7,9 +7,8 @@
       "totalAvailableDebitBalance": 8600,
       "totalAvailableCreditBalance": 3800,
       "savingsOnBestMatch": 6962.56
-    }    
+    }
   ],
-
   "credit": [
     {
       "username": "alice",
@@ -20,7 +19,7 @@
         {
           "bankName": "NatWest",
           "bankId": "NNaattWWeesstt",
-          "cardimage":"credit1.png",
+          "cardimage": "credit1.png",
           "accounts": [
             {
               "accountType": "CC",
@@ -38,7 +37,7 @@
         {
           "bankName": "RBS",
           "bankId": "RRBBSS",
-          "cardimage":"credit2.png",
+          "cardimage": "credit2.png",
           "accounts": [
             {
               "accountType": "CC",
@@ -56,7 +55,7 @@
         {
           "bankName": "Barclays",
           "bankId": "BBaarrccllaayyss",
-          "cardimage":"credit3.png",
+          "cardimage": "credit3.png",
           "accounts": [
             {
               "accountType": "M",
@@ -73,7 +72,7 @@
       ]
     }
   ],
-  "debit":[
+  "debit": [
     {
       "username": "alice",
       "password": "wonderland",
@@ -83,7 +82,7 @@
         {
           "bankName": "Halifax",
           "bankId": "HHaalliiffaaxx",
-          "cardimage":"debit1.png",
+          "cardimage": "debit1.png",
           "accounts": [
             {
               "accountType": "SB",
@@ -122,7 +121,7 @@
         {
           "bankName": "HSBC",
           "bankId": "HHSSBBCC",
-          "cardimage":"debit2.png",
+          "cardimage": "debit2.png",
           "accounts": [
             {
               "accountType": "PCA",
@@ -155,7 +154,7 @@
         {
           "bankName": "Barclays",
           "bankId": "BBaarrccllaayyss",
-          "cardimage":"debit3.png",
+          "cardimage": "debit3.png",
           "accounts": [
             {
               "accountType": "SB",
@@ -187,7 +186,5 @@
         }
       ]
     }
-    
-
   ]
 }
