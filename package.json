@@ -1,4 +1,5 @@
 {
+  "homepage": "https://nagacharankumarreddy.github.io/optima/",
   "name": "optima",
   "version": "0.1.0",
   "private": true,
@@ -24,7 +25,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server ./src/Components/mockData/data.json -p 8000",
-    "all": "concurrently  \"npm run start\" \"npm run server\" "
+    "all": "concurrently  \"npm run start\" \"npm run server\" ",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "json-server": "^0.16.3"
   }
 }
