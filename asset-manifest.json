@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/optima/static/css/main.4265e6d1.chunk.css",
+    "main.js": "/optima/static/js/main.853ca3bb.chunk.js",
+    "main.js.map": "/optima/static/js/main.853ca3bb.chunk.js.map",
+    "runtime-main.js": "/optima/static/js/runtime-main.a19fea73.js",
+    "runtime-main.js.map": "/optima/static/js/runtime-main.a19fea73.js.map",
+    "static/css/2.729b2744.chunk.css": "/optima/static/css/2.729b2744.chunk.css",
+    "static/js/2.f5a46945.chunk.js": "/optima/static/js/2.f5a46945.chunk.js",
+    "static/js/2.f5a46945.chunk.js.map": "/optima/static/js/2.f5a46945.chunk.js.map",
+    "static/js/3.cd388fcf.chunk.js": "/optima/static/js/3.cd388fcf.chunk.js",
+    "static/js/3.cd388fcf.chunk.js.map": "/optima/static/js/3.cd388fcf.chunk.js.map",
+    "index.html": "/optima/index.html",
+    "static/css/2.729b2744.chunk.css.map": "/optima/static/css/2.729b2744.chunk.css.map",
+    "static/css/main.4265e6d1.chunk.css.map": "/optima/static/css/main.4265e6d1.chunk.css.map",
+    "static/js/2.f5a46945.chunk.js.LICENSE.txt": "/optima/static/js/2.f5a46945.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/optima/static/media/img-banner.9ffc669b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a19fea73.js",
+    "static/css/2.729b2744.chunk.css",
+    "static/js/2.f5a46945.chunk.js",
+    "static/css/main.4265e6d1.chunk.css",
+    "static/js/main.853ca3bb.chunk.js"
+  ]
+}
