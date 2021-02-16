@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 class CreditHover extends Component {
   state = {}
-
-
-
   render() {
     let minbalance, showdue;
     if (this.props.bankdetails.accounts[0].minBalanceDue) {
