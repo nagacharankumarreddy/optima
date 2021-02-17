@@ -46,7 +46,8 @@ class Financials extends Component {
   }
 
   render() {
-    if (this.state.userdata[0] && this.state.debit[0] && this.state.credit[0]) {
+    if (this.state.userdata[0]) {
+      console.log(this.state.debit[0]);
       const userdata = this.state.userdata[0];
       return (
         <div>
@@ -196,9 +197,9 @@ class Financials extends Component {
                                 <BsFillInfoCircleFill />
                               </span>
                               <span>
-                                {(eval(bank.accounts[0].dueDate) -
+                                {Math.ceil((eval(bank.accounts[0].dueDate) -
                                   new Date().setDate(new Date().getDate())) /
-                                  86400000}
+                                  86400000)}
                         Days
                       </span>
                             </div>
