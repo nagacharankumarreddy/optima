@@ -221,7 +221,7 @@ class Financials extends Component {
                     <div>
                       <button className="btn btn-success btn-lg">
                         Optimize&nbsp;
-                      <GoArrowRight className="optimizearrow" />{" "}
+                      <GoArrowRight className="optimizearrow" />
                       </button>
                     </div>
                   </div>
@@ -249,8 +249,7 @@ class Financials extends Component {
         </div>
       );
     } else {
-      return (<h1  >
-
+      return (<h1>
         <span className=" text-muted" style={{
           fontSize: "80px",
           color: "black",
