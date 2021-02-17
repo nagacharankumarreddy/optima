@@ -128,7 +128,7 @@ class Financials extends Component {
                         <div className="inner-one">
                           <div className="cardimage">
 
-                            <img src={`./assets/${bank.cardimage}`} alt="Halifax@2x"
+                            <img src={`./assets/${bank.cardimage}`} alt={bank.bankName}
                               height="50px"></img>
                           </div>
                           <div>
