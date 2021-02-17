@@ -46,7 +46,8 @@ class Financials extends Component {
   }
 
   render() {
-    if (this.state.userdata[0] && this.state.debit[0] && this.state.credit[0]) {
+    if (this.state.userdata[0]) {
+      console.log(this.state.debit[0]);
       const userdata = this.state.userdata[0];
       return (
         <div>
@@ -127,7 +128,7 @@ class Financials extends Component {
                         <div className="inner-one">
                           <div className="cardimage">
 
-                            <img src={`./assets/${bank.cardimage}`} alt="Halifax@2x"
+                            <img src={`./assets/${bank.cardimage}`} alt={bank.bankName}
                               height="50px"></img>
                           </div>
                           <div>
@@ -196,9 +197,9 @@ class Financials extends Component {
                                 <BsFillInfoCircleFill />
                               </span>
                               <span>
-                                {(eval(bank.accounts[0].dueDate) -
+                                {Math.ceil((eval(bank.accounts[0].dueDate) -
                                   new Date().setDate(new Date().getDate())) /
-                                  86400000}
+                                  86400000)}
                         Days
                       </span>
                             </div>
@@ -220,7 +221,7 @@ class Financials extends Component {
                     <div>
                       <button className="btn btn-success btn-lg">
                         Optimize&nbsp;
-                      <GoArrowRight className="optimizearrow" />{" "}
+                      <GoArrowRight className="optimizearrow" />
                       </button>
                     </div>
                   </div>
@@ -248,8 +249,7 @@ class Financials extends Component {
         </div>
       );
     } else {
-      return (<h1  >
-
+      return (<h1>
         <span className=" text-muted" style={{
           fontSize: "80px",
           color: "black",
